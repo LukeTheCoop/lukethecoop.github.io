@@ -1,52 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luke Cooper's God</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">  <!-- Change this path -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <div id="writings-header">
-        <h1>God Writings by Luke Cooper</h1>
-    </div>
-
-    <div id="writings-container">
-        <!-- Poems will be loaded here dynamically -->
-    </div>
+    <!-- ... existing body content ... -->
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            fetch('/static/writings/God.json')
-                .then(response => response.json())
-                .then(writings => {
-                    const poemsContainer = document.getElementById('writings-container');
-
-                    writings.forEach(writing => {
-                        const poemBox = document.createElement('div');
-                        poemBox.className = "writings-box";
-
-                        const title = document.createElement('h3');
-                        title.textContent = `${writing.title} by ${writing.author} ${writing.date}`;
-                        title.className = "writings-title";
-
-                        const content = document.createElement('p');
-                        content.textContent = writing.content;
-                        content.className = "writings-content";
-
-                        poemBox.appendChild(title);
-                        poemBox.appendChild(content);
-                        poemsContainer.appendChild(poemBox);
-                    });
-                })
-                .catch(err => console.log(err));
+            fetch('writings/God.json')  <!-- Change this path -->
+            .then(response => response.json())
+            .then(writings => {
+                const writingsContainer = document.getElementById('writings-container');
+                writings.forEach(writing => {
+                    const writingsBox = document.createElement('div');
+                    writingsBox.className = "writings-box";
+                    const title = document.createElement('h3');
+                    title.textContent = `${writing.title} by ${writing.author} ${writing.date}`;
+                    title.className = "writings-title";
+                    const content = document.createElement('p');
+                    content.textContent = writing.content;
+                    content.className = "writings-content";
+                    writingsBox.appendChild(title);
+                    writingsBox.appendChild(content);
+                    writingsContainer.appendChild(writingsBox);
+                });
+            })
+            .catch(err => console.log("Error fetching God.json", err));
         });
     </script>
 </body>
-
 </html>

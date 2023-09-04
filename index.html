@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Luke Cooper</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Cooper's Creative Space</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Change this path based on where you place the file -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script> <!-- Change this path based on where you place the file -->
 </head>
 <body>
-	<h1>Luke Cooper</h1>
-	<h3>School: Woodside High School</h3>
-	<h3>Age: 17</h3>
-	<h3>Coder</h3>
+    <nav>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#writings">Writings</a></li>
+            <li><a href="#coding-projects">Code</a></li>
+        </ul>
+    </nav>
+
+    <header id="header">
+        <section id="title-section">
+            <div class="title-text">Luke Cooper</div>
+        </section>
+    </header>
+
+    <section id="writings">
+        <h1>Writings</h1>
+        <div class="container">
+            <!-- Poems Card -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title"><a href="poems.html">Poems</a></h2>
+                     <p class="card-text"><span id="poem-preview">Loading...</span> <a class="read-more" href="poems.html">Read More</a></p>
+              </div>
+            </div>
+
+            <!-- God Card -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title"><a href="god.html">God</a></h2>
+                    <p class="card-text"><span id="god-preview">Loading...</span> <a class="read-more" href="god.html">Read More</a></p>
+                </div>
+            </div>
+
+            <!-- Philosophies Card -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title"><a href="philosophies.html">Philosophies</a></h2>
+                    <p class="card-text"><span id="philosophy-preview">Loading...</span> <a class="read-more" href="philosophies.html">Read More</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="random-thought">
+            <h3>Random Thought Generator</h3>
+            <button onclick="generateThought()">Generate</button>
+            <p id="thought"></p>
+        </div>
+    </section>
+
+    <section id="coding-projects">
+        <h2>Code</h2>
+        <p>Explore my timeline of coding projects!</p>
+        <div id="timeline">
+            <!-- Timeline items will be here -->
+        </div>
+    </section>
+
+    <footer>
+        <div id="about-me">
+            <h2>About Me</h2>
+            <p>Hey, I'm Luke Cooper, a 17-year-old senior at Woodside High School. I have a passion for writing and coding and aspire to make a significant impact on the world around me.</p>
+        </div>
+        <p>&copy; 2023 Luke Cooper</p>
+    </footer>
+
 </body>
 </html>

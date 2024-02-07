@@ -1,0 +1,126 @@
+/* CSS */
+
+body {
+    font-family: 'Noto Serif', serif;
+    background: #FEFAE0; /* beige */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    min-height: 100vh; /* Make the minimum height of each section 100% of the viewport height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    height: 100vh; /* Make the header 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Added for the scroll message */
+}
+
+#title-section {
+    color: #BC6C25;
+    font-size: 1.5em;
+}
+
+#coding-projects {
+    justify-content: flex-start; /* Aligns the content at the start of the section */
+    padding-top: 20px; /* Adds some space at the top of the section */
+}
+
+#menuButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    z-index: 9999;
+    background-color: transparent;
+    color: #BC6C25; /* dark tan */
+}
+
+
+/* CSS */
+
+#scroll-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em; /* Adjust this value to change the size of the "scroll down" message */
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s;
+    color: #BC6C25; /* dark tan */
+    padding: 1em 1em 1em 1em;
+}
+
+#arrows::before {
+    content: "\2193"; /* Unicode for down arrow */
+}
+#arrows {
+    font-size: 2em; /* Adjust this value to change the size of the arrow */
+    animation: bounce 1s infinite;
+    color: #BC6C25; /* dark tan */
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.title-text {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* CSS */
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #BC6C25; /* dark tan */
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}

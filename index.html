@@ -7,19 +7,27 @@
     <title>Luke Cooper's Creative Space</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Change this path based on where you place the file -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
-    <script src="js/script.js"></script> <!-- Change this path based on where you place the file -->
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#writings">Writings</a></li>
-            <li><a href="#coding-projects">Code</a></li>
-        </ul>
-    </nav>
+    <!-- HTML -->
+    <button id="menuButton">☰</button>
 
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" id="closeButton">&times;</a>
+        <div class="overlay-content">
+            <a href="#header">Home</a>
+            <a href="#writings">Writings</a>
+            <a href="#coding-projects">Code</a>
+            <a href="#about-me">About</a>
+        </div>
+    </div>
     <header id="header">
+        <div id="scroll-message">
+            Scroll down
+            <div id="arrows">
+    
+            </div>
+        </div>
         <section id="title-section">
             <div class="title-text">Luke Cooper</div>
         </section>
@@ -47,6 +55,6 @@
         </div>
         <p>Created 5/15/2023 Last modified: 1/29/2024 &copy; 2023 Luke Cooper</p>
     </footer>
-
+    <script src="js/script.js"></script> <!-- Change this path based on where you place the file -->
 </body>
 </html>
